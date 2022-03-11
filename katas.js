@@ -30,3 +30,49 @@ const twoSum = (numbers, target) => {
   }
 }
 
+function getCount (str) {
+  let vowelsCount = 0;
+  let array = Array.from(str)
+  array.forEach(letter => {
+      if (letter.includes("a")) {
+          vowelsCount = vowelsCount + 1
+      }
+      if (letter.includes("e")) {
+          vowelsCount = vowelsCount + 1
+      }
+      if (letter.includes("i")) {
+          vowelsCount = vowelsCount + 1
+      }
+      if (letter.includes("o")) {
+          vowelsCount = vowelsCount + 1
+      }
+      if (letter.includes("u")) {
+          vowelsCount = vowelsCount + 1
+      }
+  })
+    return vowelsCount;
+}
+  
+const getCount = (str) => {
+  let vowelsCount = 0
+  for (i in str) {
+  switch (str[i]) {
+  case "a": 
+  case "e":
+  case "o":
+  case "i": 
+  case "u":
+  vowelsCount++
+  break;
+  }
+  }
+  return vowelsCount
+}
+
+const getCount = (str) => {
+  let vowelsCount = 0
+  let res = str.match(/[aeiou]/g)
+  if (res === null) return vowelsCount 
+  res.forEach(x => vowelsCount++)
+      return vowelsCount
+  }
