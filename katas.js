@@ -86,15 +86,16 @@ const getMiddle = (s) => {
   return res === "even" ? s.charAt(num - 1) + s.charAt(num) : s.charAt(num - 1)
 }
 
-const accum = (s) => {
-  let res = ""
-  let word = ""
-  Array.from(s).forEach(function (letter, index) {
-    res += s.charAt(index).repeat(index + 1)
-    console.log(res)
-  })
-  for (let i = 0; i < Array.from(s).length; i++) {
-    word = $res.charAt(i).repeat(i + 1)
-  }
-}
-accum("abcd")
+// const accum = (s) => {
+//   let res = ""
+//   let word = ""
+//   Array.from(s).forEach(function (letter, index) {
+//     res += s.charAt(index).repeat(index + 1)
+//     console.log(res)
+//   })
+//   for (let i = 0; i < Array.from(s).length; i++) {
+//     word = $res.charAt(i).repeat(i + 1)
+//   }
+// }
+
+const findShort = (s) => s.split(" ").sort((prev, curr) => prev.length - curr.length)[0].length
